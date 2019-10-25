@@ -8,6 +8,8 @@ class PigLatinizer
       piglatinize_phrase(user_phrase)
     end
   end
+  
+  def piglatinize_phrase
 
 
 end
