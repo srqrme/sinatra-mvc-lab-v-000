@@ -3,6 +3,7 @@ class PigLatinizer
   
   def initialize(user_phrase)
     if user_phrase.split(" ").length == 1
+      
   end
 
 
