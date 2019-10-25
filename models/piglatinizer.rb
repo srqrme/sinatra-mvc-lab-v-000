@@ -22,4 +22,12 @@ class PigLatinizer
     
     user_phrase << "ay"
   end
+  
+    def vowel?(letter)
+    letter.match(/[aAeEiIoOuU]/)
+  end
+
+  def piglatinize_phrase(string)
+    string.split.collect { |word| piglatinize_input(word) }.join(" ")
+  end
 end
