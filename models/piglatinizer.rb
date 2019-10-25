@@ -1,26 +1,26 @@
 class PigLatinizer 
   
-  def initialize(user_phrase)
-    if user_phrase.split(" ").length == 1
-      piglatinize_phrase(user_phrase)
+    def piglatinize(input)
+    if input.split(" ").length == 1
+      piglatinize_input(input)
     else
-      piglatinize_phrase(user_phrase)
+      piglatinize_phrase(input)
     end
   end
-  
-  def piglatinize_phrase(user_phrase)
-    if vowel?(user_phrase[0])
-      user_phrase = user_phrase + "w"
-    elsif !vowel?(user_phrase[0]) && !vowel?(user_phrase[1]) && !vowel?(user_phrase[2])
-      user_phrase = user_phrase.slice(3..-1) + user_phrase.slice(0,3)
-    elsif !vowel?(user_phrase[0]) && !vowel?(user_phrase[1])
-      user_phrase = user_phrase.slice(2..-1) + user_phrase.slice(0,2)
+
+  def piglatinize_input(text)
+    if vowel?(text[0])
+      text = text + "w"
+    elsif !vowel?(text[0]) && !vowel?(text[1]) && !vowel?(text[2])
+      text = text.slice(3..-1) + text.slice(0,3)
+    elsif !vowel?(text[0]) && !vowel?(text[1])
+      text = text.slice(2..-1) + text.slice(0,2)
     else
-      user_phrase = user_phrase.slice(1..-1) + user_phrase.slice(0)
+      text = text.slice(1..-1) + text.slice(0)
     end
-    
-    user_phrase << "ay"
+    text << "ay"
   end
+
   
     def vowel?(letter)
     letter.match(/[aAeEiIoOuU]/)
