@@ -6,6 +6,7 @@ class PigLatinizer
       piglatinize_phrase(user_phrase)
     else
       piglatinize_phrase(user_phrase)
+    end
   end
 
 
