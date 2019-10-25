@@ -19,6 +19,7 @@ class PigLatinizer
     else
       user_phrase = user_phrase.slice(1..-1) + user_phrase.slice(0)
     end
+    
     user_phrase << "ay"
   end
 end
