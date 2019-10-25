@@ -22,7 +22,7 @@ class PigLatinizer
   end
 
   
-    def vowel?(letter)
+  def vowel?(letter)
     letter.match(/[aAeEiIoOuU]/)
   end
 
